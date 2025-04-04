@@ -1,0 +1,34 @@
+.button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    height: 62px;
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    font-family: var(--brandFontFamily);
+}
+
+.primary {
+    background-color: var(--sohoLights);
+    color: var(--hemocyanin);
+}
+
+.primary:hover {
+    background-color: var(--luminousAqua);
+}
+
+.primary:active {
+    opacity: 0.8;
+    background-color: var(--luminousAqua);
+}
+
+.disabled,
+.disabled:hover {
+    opacity: 0.6;
+    background-color: var(--plum);
+    cursor: not-allowed;
+}
+
+.fullWidth {
+    width: 100%;
+}
