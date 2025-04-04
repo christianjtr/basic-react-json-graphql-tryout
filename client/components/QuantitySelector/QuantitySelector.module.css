@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5625rem;
+    text-aling: center;
+    gap: 10px;
+}
+
+.container .quantitySelector {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .preHeading {
+    font-size: 1.1rem;
+    color: var(--purpleHaze);
+}
+
+.container .quantitySelector .quantityIndicator {
+    width: 30px;
+    text-align: center;
+}
+
+/* TODO: We may have a button variant size */
+
+.container button {
+    width: 34px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
