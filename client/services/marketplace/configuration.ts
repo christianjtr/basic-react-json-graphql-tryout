@@ -1,4 +1,4 @@
-import * as packageJSON from "../../package.json";
+import packageJSON from "../../package.json";
 import { createGraphQLClient } from "../clients/graphqlClient";
 
 const CONFIGURATION = {
