@@ -36,7 +36,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = (props): React.JSX.Ele
                     aria-label="Icrease items">
                     -
                 </Button>
-                <span className={styles.quantityIndicator} aria-label="Quantity">
+                <span title="Current quantity" className={styles.quantityIndicator} aria-label="Quantity">
                     {quantity}
                 </span>
                 <Button
