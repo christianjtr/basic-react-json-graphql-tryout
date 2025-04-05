@@ -21,7 +21,7 @@ export default function ProductDetailsPage(): React.JSX.Element | null {
 
     const [quantity, setQuantity] = useState<number>(INITIAL_ITEM_COUNT);
 
-    const { data } = useProductByIdService(+id!);
+    const { data, isLoading } = useProductByIdService(+id!);
     const { dispatch } = useContext(ShoppingCartContext);
 
     const specifications = useMemo(() => ([
@@ -60,7 +60,7 @@ export default function ProductDetailsPage(): React.JSX.Element | null {
         setQuantity(INITIAL_ITEM_COUNT);
     }
 
-    if (!data) {
+    if (!data || isLoading) {
         return null;
     }
 
