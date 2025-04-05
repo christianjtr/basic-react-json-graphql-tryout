@@ -17,16 +17,18 @@ const useProductByIdService = (id: number): UseProductByIdService => {
     const getProductByIdService = useCallback(async () => {
         try {
             setIsLoading(true);
+
             const { Product } = await MarketplaceServices.getProductById(id);
             setData(Product);
         } catch (error) {
             console.error(`[GET_ERROR_BY_ID]: An error has occurred`, error);
             setError(error);
+
             throw (error);
         } finally {
             setIsLoading(false);
         }
-    }, [id]);
+    }, [id, MarketplaceServices, setIsLoading, setData, setError]);
 
     useEffect(() => {
         if (id) {
