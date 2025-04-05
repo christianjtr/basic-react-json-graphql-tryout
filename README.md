@@ -37,8 +37,8 @@ This conceptual test has been developed using the following technologies:
     -   [TypeScript](https://www.typescriptlang.org/)
     -   [Yarn](https://classic.yarnpkg.com/en/)
 -   **GraphQL ecosystem**
-    -   [json-graphql-server](https://react.dev/) (Server)
-    -   [graphql-request](https://react.dev/) (Client)
+    -   [json-graphql-server](https://www.npmjs.com/package/json-graphql-server) (Server)
+    -   [graphql-request](https://www.npmjs.com/package/graphql-request) (Client)
 -   **Tests**
     -   [Jest](https://jestjs.io/)
 
