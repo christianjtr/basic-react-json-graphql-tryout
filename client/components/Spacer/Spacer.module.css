@@ -1,0 +1,6 @@
+.spacer {
+    --baseSize: 25px;
+    margin-bottom: var(--baseSize);
+    display: block;
+    border: none;
+}
