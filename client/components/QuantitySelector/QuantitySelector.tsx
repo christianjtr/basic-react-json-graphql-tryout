@@ -1,27 +1,25 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Button } from "../Button/Button";
 import styles from './QuantitySelector.module.css';
 
 interface QuantitySelectorProps {
+    value: number;
     onSelectQuantity?: (value: number) => void;
 }
 
 const QuantitySelector: React.FC<QuantitySelectorProps> = (props): React.JSX.Element => {
-    const { onSelectQuantity } = props || {};
+    const { value, onSelectQuantity } = props || {};
 
-    const [quantity, setQuantity] = useState<number>(1);
-
-    const isButtonDecreaseEnabled = useMemo(() => quantity > 1, [quantity]);
+    const isButtonDecreaseEnabled = useMemo(() => value > 1, [value]);
 
     const handleOnSelectQuantity = (operation: 'increase' | 'decrease') => {
-        if (quantity === 1 && operation === 'decrease') {
-            onSelectQuantity?.(quantity);
+        if (value === 1 && operation === 'decrease') {
+            onSelectQuantity?.(value);
             return;
         }
 
-        const newQuantity = operation === 'increase' ? quantity + 1 : quantity - 1;
+        const newQuantity = operation === 'increase' ? value + 1 : value - 1;
 
-        setQuantity(newQuantity);
         onSelectQuantity?.(newQuantity);
     }
 
@@ -37,7 +35,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = (props): React.JSX.Ele
                     -
                 </Button>
                 <span title="Current quantity" className={styles.quantityIndicator} aria-label="Quantity">
-                    {quantity}
+                    {value}
                 </span>
                 <Button
                     id="btn-decrease"
