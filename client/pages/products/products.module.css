@@ -26,25 +26,3 @@
     color: var(--ice);
     font-size: 1.875rem;
 }
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 10px;
-    max-height: 56px;
-    background-color: var(--siphon);
-}
-
-.header .cartIcon {
-    font-size: 2rem;
-    width: 2.25rem;
-    height: 2.25rem;
-}
-
-.footer {
-    font-size: 0.8em;
-    color: var(--purpleHaze);
-    text-align: left;
-}
