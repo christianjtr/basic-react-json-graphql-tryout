@@ -35,10 +35,9 @@ jest.mock('../hooks/useProductByIdService', () => ({
 }));
 
 describe('ProductDetailsPage component', () => {
-  beforeAll(() => {
+  afterAll(() => {
     jest.clearAllMocks();
   });
-
 
   test("should be able to increase and decrease product quantity", async () => {
     const { getByText, getByTitle } = render(<ShoppingCartProvider><ProductDetailsPage /></ShoppingCartProvider>);
