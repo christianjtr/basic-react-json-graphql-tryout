@@ -1,0 +1,7 @@
+.footer {
+    font-size: 0.8em;
+    color: var(--purpleHaze);
+    text-align: left;
+    background-color: var(--hemocyanin);
+    padding: 20px;
+}
