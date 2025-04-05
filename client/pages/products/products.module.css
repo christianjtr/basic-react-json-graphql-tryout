@@ -26,3 +26,9 @@
     color: var(--ice);
     font-size: 1.875rem;
 }
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+}
