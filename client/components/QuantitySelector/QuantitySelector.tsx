@@ -28,19 +28,19 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = (props): React.JSX.Ele
             <span className={styles.preHeading}>Qty</span>
             <div className={styles.quantitySelector}>
                 <Button
-                    id="btn-increase"
+                    id="btn-decrease"
                     disabled={!isButtonDecreaseEnabled}
                     onClick={() => handleOnSelectQuantity('decrease')}
-                    aria-label="Icrease items">
+                    aria-label="Decrease items">
                     -
                 </Button>
                 <span title="Current quantity" className={styles.quantityIndicator} aria-label="Quantity">
                     {value}
                 </span>
                 <Button
-                    id="btn-decrease"
+                    id="btn-increase"
                     onClick={() => handleOnSelectQuantity('increase')}
-                    aria-label="Decrease items">
+                    aria-label="Increase items">
                     +
                 </Button>
             </div>
