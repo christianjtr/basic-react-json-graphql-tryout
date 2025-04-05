@@ -1,4 +1,7 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
+import { ShoppingCartProvider } from "../contexts/ShoppingCart/ShoppingCartProvider";
 import ProductDetailsPage from "../pages/products/[id]";
 
 jest.mock('next/router', () => ({
@@ -38,7 +41,7 @@ describe('ProductDetailsPage component', () => {
 
 
   test("should be able to increase and decrease product quantity", async () => {
-    const { getByText, getByTitle } = render(<ProductDetailsPage />);
+    const { getByText, getByTitle } = render(<ShoppingCartProvider><ProductDetailsPage /></ShoppingCartProvider>);
 
     const increaseQuantity = getByText("+");
 
@@ -55,7 +58,7 @@ describe('ProductDetailsPage component', () => {
   });
 
   test("should be able to add items to the basket", async () => {
-    const { getByText, getByTitle } = render(<ProductDetailsPage />);
+    const { getByText, getByTitle, queryByTitle } = render(<ShoppingCartProvider><ProductDetailsPage /></ShoppingCartProvider>);
 
     const increaseQuantity = getByText("+");
 
@@ -69,6 +72,8 @@ describe('ProductDetailsPage component', () => {
 
     const addToBasketElement = getByText("Add to cart");
     fireEvent.click(addToBasketElement);
+
+    await waitFor(() => expect(queryByTitle("Basket items")).toBeInTheDocument());
 
     const basketItems = getByTitle("Basket items");
     expect(basketItems).toHaveTextContent("4");
