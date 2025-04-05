@@ -28,3 +28,12 @@ body {
     height: 100vh;
     margin: 0 auto;
 }
+
+.flex-container-inline-spaced {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: var(--alignItems, center);
+    flex-wrap: wrap;
+    gap: 10px;
+}
