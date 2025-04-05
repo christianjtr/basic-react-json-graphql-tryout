@@ -1,70 +1,113 @@
-<img src="https://static.octopuscdn.com/constantine/constantine.svg" alt="Octopus Energy mascot, Constantine" width="100" />
+# Product page consuming data from a mocked GraphQL server
 
-# Octopus Frontend code test
+This tryout aims to create a basic product page by fetching data from a mocked GraphQL server.
 
-In this code test, you'll be asked to:
+> [!NOTE]
+>
+> -   ❤️ Feel free to add any improvements or suggestions you consider.
 
-- Make a simple React app that follows the design in `design.jpg`, consumes the API and makes the front end tests pass. Ideally the app should be responsive.
+1. [Goals](#001)
+2. [Tech Stack](#002)
+3. [Installation and running the project](#003)
+4. [Samples](#004)
+5. [Dev notes](#005)
+6. [Next Steps](#006)
 
-We've included:
+<a name="001"></a>
 
-- A sample [Next.js](https://nextjs.org/) project with a Typescript setup for your convenience, but you're welcome to swap it out for another framework if you prefer
-- Some CSS colour variables that match the colours in the design
-- The assets that you will need to complete the design
+### 🎯 Goals
 
-You're also welcome to write more tests for other parts of the application - but design those however you like.
+-   Meet the design given (File: design.jpg).
+-   Consume data from GraphQL's server (Get product's data).
+-   Use TypeScript.
+-   Responsive UI.
+-   **Features**
+    -   Select quantity of the products.
+    -   Add products to a shopping cart.
 
-## Getting started
+<a name="002"></a>
 
-First you'll need to install your dependencies. We've used yarn, if you have another preference feel free to remove the lock file and use what you are comfortable with:
+### Tech Stack
 
-```sh
-cd client && yarn
+This conceptual test has been developed using the following technologies:
+
+-   **Front-end**
+    -   [React](https://react.dev/)
+    -   [NextJS](https://nextjs.org/)
+    -   [TypeScript](https://www.typescriptlang.org/)
+    -   [Yarn](https://classic.yarnpkg.com/en/)
+-   **GraphQL ecosystem**
+    -   [json-graphql-server](https://react.dev/) (Server)
+    -   [graphql-request](https://react.dev/) (Client)
+-   **Tests**
+    -   [Jest](https://jestjs.io/)
+
+<a name="003"></a>
+
+### Installation and running the project
+
+The project requires:
+
+-   [NodeJS](https://nodejs.org/)
+
+**Clone the repository:**
+
+```shell
+git clone https://github.com/christianjtr/basic-react-json-graphql-tryout.git
 ```
 
-## Start the app
+**Scripts:**
 
-```sh
-yarn dev
+Before executing these scripts, you must run **yarn install** in the directory you just downloaded/cloned the codebase. _Other scripts are in package.json file. Also, you may consult the CHALLENGE.md file_.
+
+```shell
+# Start the development environment
+> yarn dev
+
+# Run unit tests
+> yarn test
+
 ```
 
-This will do two things:
+<a name="004"></a>
 
-- Start a Next.js app running in development on <http://localhost:3000>
-- Start a graphQL stub server running on <http://localhost:3001/graphql>
+### Samples
 
-## Running tests
+1. Product page
 
-You can run tests from the client directory.
+<p align="center">
+  <img src="https://github.com/christianjtr/basic-react-json-graphql-tryout/blob/main/samples/product_page.gif"/>
+</p>
 
-```sh
-cd client && yarn test
-```
+<a name="005"></a>
 
-This should give you two failures:
+### Dev notes
 
-```sh
-FAIL test/product.test.js
-    ✕ should be able to increase and decrease product quantity
-    ✕ should be able to add items to the basket
-```
+Tasks done before starting the project:
 
-The task is to build the app that passes these tests.
+-   Fixed `yarn.lock` file which was corrupted.
+    -   Deleting it and running `yarn install --check-files`.
+-   Added missing types `yarn add --dev @types/react`.
+-   Adapted `package.json` file.
+-   Researching a **lightweight graphQL client**.
+-   Checked mocked data integrity.
+-   Moved routes to an appropiate convention (A redirection was put in place)
+    -   Previous: `/product`
+    -   Current: `/products/{ID}`
+-   Figma usage to somehow determine size of UI elements and spacing.
 
-## What we're looking for
+<a name="006"></a>
 
-We would like you to demonstrate your ability to:
+### Next steps
 
-- Reason through a programming problem
-- Implement a visual design
-- Implement some user interactions
-- Write code that is easy to understand and extend
-- Write tests that document and safeguard the program's behaviour
-- Use a version control system (e.g. git) to effectively convey intent
-- Write Typescript typings for the components you create, and also the typings for the GraphQL API response
-
-Notes:
-
-- This has not been set up with any type of CSS-in-JS, but if that is something you would like to add, please feel free.
-
-Best of luck!
+-   Upgrade project dependencies
+    -   Bump React version.
+    -   Bump NextJS version.
+    -   Other relevant libraries like testing ones.
+-   As the project gets larger, we should investigate a robust state management solution.
+    -   Redux Toolkit.
+    -   Zustand.
+    -   Others.
+-   Pages
+    -   Not found page.
+    -   Loading page or component.
