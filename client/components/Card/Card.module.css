@@ -1,0 +1,17 @@
+.card {
+}
+
+.card .title {
+    font-size: 2.375rem;
+    font-weight: 700px;
+    line-height: 45px;
+}
+
+.card .cartImageContainer {
+    border-radius: 20px;
+}
+
+.card .cartImageContainer img {
+    width: 100%;
+    border-radius: inherit;
+}
