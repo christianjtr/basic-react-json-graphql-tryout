@@ -16,6 +16,11 @@
         "jsx": "preserve",
         "strictNullChecks": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "__mocks__/graphql-request.js"
+    ],
     "exclude": ["node_modules"]
 }
