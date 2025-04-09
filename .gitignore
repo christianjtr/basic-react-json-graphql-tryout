@@ -9,6 +9,9 @@ node_modules
 .next
 out
 
+# coverage
+client/coverage
+
 # production
 build
 
