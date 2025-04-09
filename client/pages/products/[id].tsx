@@ -6,7 +6,7 @@ import { Button } from "../../components/Button/Button";
 import { Card } from "../../components/Card/Card";
 import { Spacer } from "../../components/Spacer/Spacer";
 import { QuantitySelector } from "../../components/QuantitySelector/QuantitySelector";
-import { ProductDescription, ProductSpecifications } from "./components";
+import { ProductDescription, ProductSpecifications } from "../../components/pages/products";
 import { formatNumberCurrency } from "../../utils/formatNumberCurrency";
 import { useProductByIdService } from "../../hooks/useProductByIdService";
 import { ShoppingCartContext } from "../../contexts/ShoppingCart/ShoppingCartContext";
